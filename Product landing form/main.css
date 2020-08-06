@@ -1,0 +1,233 @@
+:root {
+    --gray: rgb(230, 231, 231);
+}
+
+body {
+    background: var(--gray);
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+}
+
+/* Header */
+#header {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 100%;
+    height: 8vh;
+    top: 0;
+    left: 0;
+
+    background: var(--gray);
+    z-index: 1;
+}
+
+#header-img {
+    width: auto;
+    height: 60%;
+}
+
+#nav-bar .nav-link {
+    margin: 2px;
+    padding-right: 2px;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s, text-decoration 0.8s ease-in;
+}
+
+#nav-bar .nav-link:hover {
+    color: rgb(214, 182, 0);
+    text-decoration: underline;
+}
+
+/* form */
+
+#form-container {
+    display: inline-block;
+    margin: 10vh auto 5vh auto;
+    text-align: center;
+    width: 100%;
+}
+#form-container > h1 {
+    font-size: 30px;
+}
+#submit {
+    margin-top: 10px;
+    width: 10vw;
+    background: rgb(255, 193, 59);
+    transition: background .5s ease-in, width .2s ease-in;
+}
+#email {
+    width: 35vw;
+    height: 20px;
+    color: gray;
+}
+input#submit:hover {
+    background: gold;
+    width: 11vw;
+}
+
+/* Features  -- redo --*/
+#features {
+    margin: 0 auto 10px 20%;
+
+    display: flex;
+    flex-direction: column;
+}
+/* should use font awesome instead */
+.icon {
+    color: orange;
+    font-size: 8vw;
+    width: 12vw;
+}
+.feature {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+/* Maybe using flex was not the best idea since all the icons
+have different width  -- fixed*/
+.feature-icon {
+    margin: 0 5vh 20px 0;
+}
+
+/* Video */
+#how-it-works {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+/* Prices  */
+#pricing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    width: 70%;
+    height: auto;
+}
+#pricing-content {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+    grid-template-rows: auto;
+    grid-column-gap: 10vw;
+}
+.price {
+    /* position: relative; */
+    text-align: center;
+    background: rgb(202, 202, 202);
+    width: 100%;
+    height: 100%;
+    border: 1px black solid;
+    
+}
+.price-name-container {
+    background: rgb(71, 71, 71);
+    color: white;
+    width: 100%;
+    padding: 10px 0;
+    
+}
+
+
+
+/* footer  background: rgb(202, 202, 202);*/
+
+footer {
+    background: rgb(202, 202, 202);
+    padding: 10px;
+}
+
+footer > ul {
+    display: flex;
+    justify-content: flex-end;
+}
+footer > ul > li {
+    padding: 0 10px;
+    list-style: none;
+}
+
+footer > span {
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.9em;
+    color: rgb(43, 43, 43);
+}
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.price-select {
+    padding: 5px;
+    margin-bottom: 5px;
+    transition: 1s;
+}
+.price-select:hover {
+    background: gold;
+}
+
+@media (max-width: 360px) {
+    /* TO DO */
+
+    /*  1) Header - too wide - change it - YEP
+        2) Email input - wider - YEP
+        3) Submit button - wider and higher - YEP
+        4) Delete FA icons  - YEP
+        5) Make the video thiner - YEP
+        6) Fix the grid - from row to column
+    */
+
+    .nav-link {
+        display: none;
+    }
+    #header-img {
+        margin: 5px auto;
+    }
+
+    #video {
+        max-width: 100%;
+        height: auto;
+        min-height: 250px;
+    }
+
+    #submit {
+        width: 35vw;
+        background: rgb(255, 193, 59);
+        transition: background .5s ease-in, width .2s ease-in;
+    }
+    #email {
+        width: 50vw;
+        height: 20px;
+        color: gray;
+    }
+    #email::placeholder {
+        text-align: center;
+    }
+    i.icon {
+        display: none;
+    }
+
+    #features {
+        margin: 5vw;
+    }
+
+    /* the grid part */
+
+    #pricing-content {
+        grid-template-columns: auto;
+        grid-template-rows: repeat(auto-fill, minmax(auto, 1fr));
+        gap: 30px;
+    }
+}

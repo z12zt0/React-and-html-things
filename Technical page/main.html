@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./main.css">
+    <title>Welcome back!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main id="main-doc">
+        <!-- 10 p, 5 code, 5 li,  -->
+        <section class="main-section" id="Introduction">
+            <!-- id's -->
+            <header>Introduction</header>
+            <p> <code>Cascading Style Sheets (CSS)</code>  is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML).
+                 CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.</p>
+            <p>CSS is one of the core languages of the open Web and is standardized across Web browsers according to the W3C specification.
+                 Previously development of various parts of CSS specification was done synchronously, which allowed versioning of the latest recommendation. You might have heard about CSS1, CSS2.1, CSS3. However, CSS4 has never become an official version.</p>
+            <p>From CSS3, the scope of the specification increased significantly and the progress on different CSS modules started to differ so much, that it became more effective to develop and release recommendations separately per module.
+                 Instead of versioning the CSS specification, W3C now periodically takes a snapshot of the latest stable state of the CSS specification.</p>
+        </section>
+        
+        <section class="main-section" id="Prerequisites">
+            <header>Prerequisites</header>
+            <p>The guide assumes you have the following basic background:</p>
+            <ol>
+                <li>Basic familiarity with using computers, and using the Web passively</li>
+                <li>A basic work enviroment set up, and an understanding of how to create and manage files</li>
+                <li>Basic familiarity with HTML</li>
+                <li>The will to learn</li>
+                <li>...and a little bit of your time</li>
+            </ol>
+            <code></code>
+        </section>
+
+        <section class="main-section" id="CSS_syntax">
+            <header>CSS syntax</header>  
+            <p>CSS is a rule-based language — you define rules specifying groups of styles that should be applied to particular elements or groups of elements on your web page.
+                 For example "I want the main heading on my page to be shown as large red text."</p>
+            <p>The following code shows a very simple CSS rule that would achieve the styling described above:</p>
+            <pre>
+                h1 {
+                    color: red;
+                    font-size: 5em;
+                }
+            </pre>
+            <p>
+                The rule opens with a selector . This selects the <code> HTML </code> element that we are going to style. In this case we are styling level one headings <code> &lt;h1&gt; </code> .
+            </p>
+        </section>
+
+        <section class="main-section" id="DOM_representation">
+            <header>DOM representation</header>
+            <p>Rather than a long, boring explanation, let's look at an example to see how a real HTML snippet is converted into a DOM.</p>
+            <p>Take the following HTML code:</p>
+            <pre>
+                &lt;p&gt;
+                    Let's use:
+                    &lt;span&gt;Cascading&lt;/span&gt;
+                    &lt;span&gt;Style&lt;/span&gt;
+                    &lt;span&gt;Sheets&lt;/span&gt;
+                &lt;/p&gt;
+            </pre>
+            <p>
+                In the DOM, the node corresponding to our <code> &lt;p&gt; </code> element is a parent.
+                Its children are a text node and the three nodes corresponding to our <code> &lt;span&gt; </code> elements. The <code>&lt;SPAN&gt;</code>  nodes are also parents, with text nodes as their children:
+            </p>
+            <pre>
+                P
+                ├─ "Let's use:"
+                ├─ SPAN
+                |  └─ "Cascading"
+                ├─ SPAN
+                |  └─ "Style"
+                └─ SPAN
+                └─ "Sheets"
+            </pre>
+        </section>
+
+        <section class="main-section" id="Applying_CSS_to_HTML">
+            <header>Applying CSS to HTML</header>
+            <p>External stylesheet works with <code>&lt;link&gt;</code> </p>
+            <pre>
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;title&gt;My CSS experiment&lt;/title&gt;
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello World!&lt;/h1&gt;
+        &lt;p&gt;This is my first CSS example&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+            <p>The <code>CSS stylesheet</code>  file might look like this:</p>
+            <pre> 
+                h1 {
+                    color: blue;
+                    background-color: yellow;
+                    border: 1px solid black;
+                  }
+                  
+                  p {
+                    color: red;
+                  }
+            </pre>
+            
+        </section>
+        <section class="main-section" id="More_information">
+            <header>More information</header>
+            <p>For more information:
+              <a id="ref-link" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS">MDN web docs</a>  
+            </p>
+            
+        </section>
+
+    </main>
+    <nav id="navbar">
+        <header>CSS</header>
+            <!-- TO DO -> 12 and more -->
+        <ul>
+            <!-- section's ids -->
+            <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+            <li><a href="#Prerequisites" class="nav-link">Prerequisites</a></li>
+            <li><a href="#CSS_syntax" class="nav-link">CSS syntax</a></li>
+            <li><a href="#DOM_representation" class="nav-link">DOM representation</a></li>
+            <li><a href="#Applying_CSS_to_HTML" class="nav-link">Applying CSS to HTML</a></li>
+            <li><a href="#More_information" class="nav-link">More information</a></li>
+        </ul> 
+        
+        <!-- + media -->
+    </nav>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey form</title>
+    <link rel="stylesheet" href="./main.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet"> 
+</head>
+<body>
+
+        <div id="pre-form">
+            <h1 id="title">Title</h1>
+            <p id="description">Description</p>
+        </div>
+        <div id="main">
+            <form action="#" id="survey-form">
+                <label for="name" id="name-label">Enter your name: </label>
+                <br>
+                <input type="text" name="name" id="name" placeholder="Name Surname" required/>
+                <br>
+                <label for="email" id="email-label">Enter your Email: </label>
+                <br>
+                <input type="email" name="email" id="email" placeholder="PogYou@dog.pog" required/>
+                <br>
+                <label for="number" id="number-label">Enter your phone number: <span class="low">(optionaly)</span></label>
+                <br>
+                <input type="number" name="number" id="number" min="5" max="11" placeholder="88005553535"/>
+                <br>
+                <label for="dropdown">Choose your country, please</label>
+                <select name="dropdown" id="dropdown" required>
+                    <option value="" disabled selected>Choose your country</option>
+                    <option value="EN">United Kingdom</option>
+                    <option value="US">USA</option>
+                    <option value="RU">Russia</option>
+                    <option value="EU">EU</option>
+                    <option value="CN">China</option>
+                </select>
+    
+                <fieldset id="radio-field">
+                    <label>Choose your gender: </label>
+                    <label>
+                        <input type="radio" name="sex" id="Man" value="man"/>
+                        M
+                    </label>
+                    
+                    <label> 
+                        <input type="radio" name="sex" id="Woman" value="woman"/>
+                        W
+                    </label>
+                    
+                    <br>
+                    <label for="">Would you recommend #yourname# to your friends?</label>
+                    <br>
+                    <label>
+                        <input type="radio" name="recommended" id="rec-yes" value="yep" checked/>
+                        Yes
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="recommended" id="rec-mb" value="maybe">
+                        Maybe
+                    </label>
+                    <br>
+                    <label >
+                        <input type="radio" name="recommended" id="rec-nope" value="nop"/>
+                        No
+                    </label>
+                    <br>
+                    <label>What language do you prefer the most?</label>
+                    <br>
+                    <input type="checkbox" name="like" id="JS" value="JS">
+                    <label for="JS">
+                        JS
+                    </label>
+                    
+                    <br>
+                    <input type="checkbox" name="like" id="Python" value="Py">
+                    <label for="Python">Python</label>
+                    
+                    <br>
+                    
+                    <input type="checkbox" name="like" id="C++" value="C++">
+                    <label for="C++">C++</label>
+                </fieldset>
+    
+                <label id="comment-text" for="text">Your comment</label>
+                <br/>
+                <textarea name="textarea" id="text" placeholder="Good job :)"></textarea>
+                <br>
+                <div id="button-container">
+                    <button type="submit" id="submit">Submit</button>
+                    <button type="reset" id="reset">Reset</button>
+                </div>
+                
+    
+    
+    
+            </form>
+        </div>
+        
+    
+    
+
+</body>
+</html>
